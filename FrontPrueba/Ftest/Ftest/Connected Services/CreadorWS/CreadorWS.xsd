@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCreador" type="tns:eliminarCreador" />
+  <xs:element name="eliminarCreadorResponse" type="tns:eliminarCreadorResponse" />
+  <xs:element name="insertarCreador" type="tns:insertarCreador" />
+  <xs:element name="insertarCreadorResponse" type="tns:insertarCreadorResponse" />
+  <xs:element name="listarCreadores" type="tns:listarCreadores" />
+  <xs:element name="listarCreadoresResponse" type="tns:listarCreadoresResponse" />
+  <xs:element name="modificarCreador" type="tns:modificarCreador" />
+  <xs:element name="modificarCreadorResponse" type="tns:modificarCreadorResponse" />
+  <xs:element name="obtenerCreadorPorId" type="tns:obtenerCreadorPorId" />
+  <xs:element name="obtenerCreadorPorIdResponse" type="tns:obtenerCreadorPorIdResponse" />
+  <xs:complexType name="insertarCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creador" type="tns:creadoresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="creadoresDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nacionalidad" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="seudonimo" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoCreador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCreadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCreadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:creadoresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creador" type="tns:creadoresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCreadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCreadorPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCreadorPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:creadoresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCreadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoCreador">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AUTOR" />
+      <xs:enumeration value="TRADUCTOR" />
+      <xs:enumeration value="ILUSTRADOR" />
+      <xs:enumeration value="NARRADOR" />
+      <xs:enumeration value="EDITOR" />
+      <xs:enumeration value="GUIONISTA" />
+      <xs:enumeration value="DISENADOR_EDITORIAL" />
+      <xs:enumeration value="OTRO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

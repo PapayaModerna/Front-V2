@@ -1,0 +1,266 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BiblioMaster.master.cs" Inherits="WA_Prueba.BiblioMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/siteUsuario.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    
+    <title>
+        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        /* Aplicar la fuente Roboto a todo el body */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Estilos para el menú lateral */
+        #sideBarMster .mynav a {
+            text-decoration: none;
+            color: black;
+            font-size: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        #sideBarMster .mynav li.nav-item {
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para la barra superior */
+        .navbar-dark .container-fluid {
+            background-color: #2c6b3e; /* Barra superior verde */
+            height: fit-content;
+            position: center;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-dark .navbar-brand {
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .navbar-dark form.d-flex {
+            margin-left: auto;
+        }
+
+        /* Ajustes de responsividad para el layout principal */
+        @media (min-width: 768px) {
+            #sideBarMster {
+                width: 250px;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #343a40;
+                z-index: 1040;
+                overflow-y: auto;
+            }
+
+            #sideBarMster .mynav a {
+                color: black !important;
+                text-decoration: none !important;
+                font-weight: bold;
+                text-align: center;
+                display: block;
+                margin-bottom: 3cm;
+                border-radius: 8px;
+            }
+
+            #sideBarMster .mynav li.nav-item {
+                text-align: center;
+            }
+
+            .container-fluid.d-flex.p-0.h-100 {
+                height: 100vh;
+            }
+
+            .bg-light.flex-fill.overflow-auto {
+                margin-left: 250px;
+                height: 100vh;
+                overflow-y: auto;
+            }
+        }
+
+        /* Asegurar que en pantallas pequeñas el offcanvas no afecte el scroll del body principal */
+        body.offcanvas-open {
+            overflow: hidden;
+        }
+
+        .offcanvas-start {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Estilos de botones para la barra lateral */
+        .mynav li a:hover {
+            background: rgba(212,212,212,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+
+        /* Estilos de la barra lateral */
+        #sideBarMster .text-center {
+            margin-bottom: 4em;
+        }
+
+        /* Estilo del avatar en la barra lateral */
+        .avatar-circle {
+            width: 100px;
+            height: 100px;
+            background-color: #000000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        #lblNombreMaster {
+            font-size: 1rem;
+            color: black; /* Ahora el color del texto es negro */
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .avatar-circle .initial {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .avatar-master:hover {
+            background-color: #a0a0a0;
+        }
+
+        .fw-bold {
+            font-family: 'Roboto';
+        }
+
+        /* Botón de "Volver a Principal" */
+        .btn-secondary {
+            background-color: #6c757d; /* Gris */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-right: 10px; /* Espacio entre botones */
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Botón de "Agregar Material" */
+        .btn-primary {
+            background-color: #2c6b3e; /* Verde oscuro */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #256032;
+        }
+
+        /* Alineación de botones */
+        .btn-container {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex p-0 h-100">
+        <div id="sideBarMster" class="d-flex flex-column flex-shrink-0 p-3 text-white offcanvas-md offcanvas-start">
+            <!-- Avatar de sesión centrado en la barra lateral -->
+            <div class="text-center perfil-usuario">    
+                <a href="UsuarioAdmin.aspx" class="avatar-circle avatar-master mx-auto mb-2">
+                    <span id="lblInicial" runat="server" class="initial"></span>
+                </a>
+                <div id="lblNombreMaster" runat="server" class="fw-bold"></div>
+            </div>
+            
+            <ul class="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-1">
+                    <a href="librosPrincipal.aspx"><i class="fa-solid fa-warehouse"></i>LIBROS</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="PrestamosPrincipal.aspx">PRÉSTAMOS</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="GestionUsuarios.aspx">USUARIOS</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="ReportesPrincipal.aspx">REPORTES</a>
+                </li>
+            </ul>
+            <hr>
+            <div class="d-flex">
+                <i class="fa-solid fa-book me-2"></i>
+                <h6 class="mt-1 mb-0">MYHOLYLIB</h6>
+            </div>
+        </div>
+
+        <div class="bg-light flex-fill overflow-auto">
+            <div class="p-2 d-md-none d-flex text-white bg-primary">
+                <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <img src="Images/pucp.png" class="ms-3" width="70">
+            </div>
+
+            <nav class="navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Sistema de Bibliotecas Didáctico!</a>
+                    <form class="d-flex">
+                        <div class="dropdown ps-3">
+                            <button class="btn btn-outline-light dropdown-toggle"
+                                id="btnUser" data-bs-toggle="dropdown" type="button"
+                                aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>
+                                <span id="userNameLabel"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnUser">
+                                <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="p-4">
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="cphContenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+                <asp:ContentPlaceHolder ID="cphScripts" runat="server" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

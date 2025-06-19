@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarTema" type="tns:eliminarTema" />
+  <xs:element name="eliminarTemaResponse" type="tns:eliminarTemaResponse" />
+  <xs:element name="insertarTema" type="tns:insertarTema" />
+  <xs:element name="insertarTemaResponse" type="tns:insertarTemaResponse" />
+  <xs:element name="listarTemas" type="tns:listarTemas" />
+  <xs:element name="listarTemasResponse" type="tns:listarTemasResponse" />
+  <xs:element name="modificarTema" type="tns:modificarTema" />
+  <xs:element name="modificarTemaResponse" type="tns:modificarTemaResponse" />
+  <xs:element name="obtenerTemaPorId" type="tns:obtenerTemaPorId" />
+  <xs:element name="obtenerTemaPorIdResponse" type="tns:obtenerTemaPorIdResponse" />
+  <xs:complexType name="obtenerTemaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTema" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTemaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="temasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idTema" type="xs:int" />
+      <xs:element minOccurs="0" name="temaPadre" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTema" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tema" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tema" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTemas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTemasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="categoria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GENERO" />
+      <xs:enumeration value="EDAD" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

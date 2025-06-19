@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="contarDisponiblesPorMaterial" type="tns:contarDisponiblesPorMaterial" />
+  <xs:element name="contarDisponiblesPorMaterialResponse" type="tns:contarDisponiblesPorMaterialResponse" />
+  <xs:element name="contarDisponiblesPorSede" type="tns:contarDisponiblesPorSede" />
+  <xs:element name="contarDisponiblesPorSedeResponse" type="tns:contarDisponiblesPorSedeResponse" />
+  <xs:element name="contarEjemplaresFisicosDisponiblesPorMaterialYSede" type="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSede" />
+  <xs:element name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" type="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" />
+  <xs:element name="contarFisicosDisponiblesPorMaterial" type="tns:contarFisicosDisponiblesPorMaterial" />
+  <xs:element name="contarFisicosDisponiblesPorMaterialResponse" type="tns:contarFisicosDisponiblesPorMaterialResponse" />
+  <xs:element name="contarTotalPorMaterial" type="tns:contarTotalPorMaterial" />
+  <xs:element name="contarTotalPorMaterialResponse" type="tns:contarTotalPorMaterialResponse" />
+  <xs:element name="contarTotalPorSede" type="tns:contarTotalPorSede" />
+  <xs:element name="contarTotalPorSedeResponse" type="tns:contarTotalPorSedeResponse" />
+  <xs:element name="eliminarEjemplar" type="tns:eliminarEjemplar" />
+  <xs:element name="eliminarEjemplarResponse" type="tns:eliminarEjemplarResponse" />
+  <xs:element name="insertarEjemplar" type="tns:insertarEjemplar" />
+  <xs:element name="insertarEjemplarResponse" type="tns:insertarEjemplarResponse" />
+  <xs:element name="listarEjemplares" type="tns:listarEjemplares" />
+  <xs:element name="listarEjemplaresDisponiblesPorMaterial" type="tns:listarEjemplaresDisponiblesPorMaterial" />
+  <xs:element name="listarEjemplaresDisponiblesPorMaterialResponse" type="tns:listarEjemplaresDisponiblesPorMaterialResponse" />
+  <xs:element name="listarEjemplaresResponse" type="tns:listarEjemplaresResponse" />
+  <xs:element name="listarFisicosDisponiblesPorMaterialYSede" type="tns:listarFisicosDisponiblesPorMaterialYSede" />
+  <xs:element name="listarFisicosDisponiblesPorMaterialYSedeResponse" type="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
+  <xs:element name="modificarEjemplar" type="tns:modificarEjemplar" />
+  <xs:element name="modificarEjemplarResponse" type="tns:modificarEjemplarResponse" />
+  <xs:element name="obtenerEjemplar" type="tns:obtenerEjemplar" />
+  <xs:element name="obtenerEjemplarResponse" type="tns:obtenerEjemplarResponse" />
+  <xs:element name="obtenerPrimerEjemplarDisponiblePorMaterial" type="tns:obtenerPrimerEjemplarDisponiblePorMaterial" />
+  <xs:element name="obtenerPrimerEjemplarDisponiblePorMaterialResponse" type="tns:obtenerPrimerEjemplarDisponiblePorMaterialResponse" />
+  <xs:complexType name="listarEjemplaresDisponiblesPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresDisponiblesPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejemplaresDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAdquisicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="formatoDigital" type="tns:formatoDigital" />
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+      <xs:element minOccurs="0" name="material" type="tns:materialesDTO" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEjemplar" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="editorial" type="tns:editorialesDTO" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplares">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjemplarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarTotalPorSede">
+    <xs:sequence>
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarTotalPorSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarFisicosDisponiblesPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarFisicosDisponiblesPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSede">
+    <xs:sequence>
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarTotalPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarTotalPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaAdquisicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEjemplar" />
+      <xs:element minOccurs="0" name="formatoDigital" type="tns:formatoDigital" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEjemplarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresFisicosDisponiblesPorMaterialYSede">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrimerEjemplarDisponiblePorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrimerEjemplarDisponiblePorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarFisicosDisponiblesPorMaterialYSede">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarFisicosDisponiblesPorMaterialYSedeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaAdquisicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEjemplar" />
+      <xs:element minOccurs="0" name="formatoDigital" type="tns:formatoDigital" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjemplarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="formatoDigital">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MP3" />
+      <xs:enumeration value="PDF" />
+      <xs:enumeration value="CBR" />
+      <xs:enumeration value="PPT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEjemplar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FISICO" />
+      <xs:enumeration value="DIGITAL" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

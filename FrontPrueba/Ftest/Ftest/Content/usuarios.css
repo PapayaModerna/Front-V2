@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.btn-guardar {
+    font-size: 1.25rem;
+    padding: 16px 40px;
+    border-radius: 8px;
+}
+
+    .btn-guardar:hover {
+        /*background-color: #a0a0a0;*/
+    }
+
+.btn-logout {
+    font-size: 1rem;
+    padding: 16px 40px;
+    border-radius: 8px;
+}
+
+    .btn-logout:hover {
+        /*background-color: #a0a0a0;*/
+    }
+
+.initial-label {
+    font-size: 3em;
+}

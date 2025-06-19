@@ -1,0 +1,94 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Opcional, evita scroll horizontal */
+    font-family: "Roboto";
+}
+
+.tarjetas {
+    padding: 2em 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .card .boton-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: auto;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.doble-boton {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 1em;
+}
+
+.btnRenovar {
+    background-color: #007BFF;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnDetalle {
+    background-color: #28A745;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-button {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+    .close-icon:hover {
+        color: #d00;
+    }

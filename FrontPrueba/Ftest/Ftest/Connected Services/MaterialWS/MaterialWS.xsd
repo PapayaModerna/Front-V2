@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarMaterial" type="tns:eliminarMaterial" />
+  <xs:element name="eliminarMaterialResponse" type="tns:eliminarMaterialResponse" />
+  <xs:element name="insertarMaterial" type="tns:insertarMaterial" />
+  <xs:element name="insertarMaterialResponse" type="tns:insertarMaterialResponse" />
+  <xs:element name="listarCreadoresPorMaterial" type="tns:listarCreadoresPorMaterial" />
+  <xs:element name="listarCreadoresPorMaterialResponse" type="tns:listarCreadoresPorMaterialResponse" />
+  <xs:element name="listarEjemplaresMaterial" type="tns:listarEjemplaresMaterial" />
+  <xs:element name="listarEjemplaresMaterialResponse" type="tns:listarEjemplaresMaterialResponse" />
+  <xs:element name="listarMasRecientes" type="tns:listarMasRecientes" />
+  <xs:element name="listarMasRecientesResponse" type="tns:listarMasRecientesResponse" />
+  <xs:element name="listarMasSolicitados" type="tns:listarMasSolicitados" />
+  <xs:element name="listarMasSolicitadosResponse" type="tns:listarMasSolicitadosResponse" />
+  <xs:element name="listarMaterialPorCaracteres" type="tns:listarMaterialPorCaracteres" />
+  <xs:element name="listarMaterialPorCaracteresResponse" type="tns:listarMaterialPorCaracteresResponse" />
+  <xs:element name="listarMaterialesPorSede" type="tns:listarMaterialesPorSede" />
+  <xs:element name="listarMaterialesPorSedeResponse" type="tns:listarMaterialesPorSedeResponse" />
+  <xs:element name="listarMaterialesPorSedeYFiltro" type="tns:listarMaterialesPorSedeYFiltro" />
+  <xs:element name="listarMaterialesPorSedeYFiltroResponse" type="tns:listarMaterialesPorSedeYFiltroResponse" />
+  <xs:element name="listarPorCaracter_Creador" type="tns:listarPorCaracter_Creador" />
+  <xs:element name="listarPorCaracter_CreadorResponse" type="tns:listarPorCaracter_CreadorResponse" />
+  <xs:element name="listarTemasPorMaterial" type="tns:listarTemasPorMaterial" />
+  <xs:element name="listarTemasPorMaterialResponse" type="tns:listarTemasPorMaterialResponse" />
+  <xs:element name="listarTodos" type="tns:listarTodos" />
+  <xs:element name="listarTodosResponse" type="tns:listarTodosResponse" />
+  <xs:element name="modificarMaterial" type="tns:modificarMaterial" />
+  <xs:element name="modificarMaterialResponse" type="tns:modificarMaterialResponse" />
+  <xs:element name="obtenerPorId" type="tns:obtenerPorId" />
+  <xs:element name="obtenerPorIdResponse" type="tns:obtenerPorIdResponse" />
+  <xs:complexType name="listarTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="editorial" type="tns:editorialesDTO" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMasSolicitados">
+    <xs:sequence>
+      <xs:element name="limite" type="xs:int" />
+      <xs:element name="pagina" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMasSolicitadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialPorCaracteres">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caracteres" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialPorCaracteresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreadoresPorMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreadoresPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:creadoresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="creadoresDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nacionalidad" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="seudonimo" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoCreador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejemplaresDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAdquisicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="formatoDigital" type="tns:formatoDigital" />
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+      <xs:element minOccurs="0" name="material" type="tns:materialesDTO" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEjemplar" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorSedeYFiltro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="filtro" type="xs:string" />
+      <xs:element name="porTitulo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorSedeYFiltroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="material" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMasRecientes">
+    <xs:sequence>
+      <xs:element name="limite" type="xs:int" />
+      <xs:element name="pagina" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMasRecientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCaracter_Creador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caracteres" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCaracter_CreadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorSede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorSedeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="material" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTemasPorMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTemasPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="temasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idTema" type="xs:int" />
+      <xs:element minOccurs="0" name="temaPadre" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoCreador">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AUTOR" />
+      <xs:enumeration value="TRADUCTOR" />
+      <xs:enumeration value="ILUSTRADOR" />
+      <xs:enumeration value="NARRADOR" />
+      <xs:enumeration value="EDITOR" />
+      <xs:enumeration value="GUIONISTA" />
+      <xs:enumeration value="DISENADOR_EDITORIAL" />
+      <xs:enumeration value="OTRO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="formatoDigital">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MP3" />
+      <xs:enumeration value="PDF" />
+      <xs:enumeration value="CBR" />
+      <xs:enumeration value="PPT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEjemplar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FISICO" />
+      <xs:enumeration value="DIGITAL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="categoria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GENERO" />
+      <xs:enumeration value="EDAD" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

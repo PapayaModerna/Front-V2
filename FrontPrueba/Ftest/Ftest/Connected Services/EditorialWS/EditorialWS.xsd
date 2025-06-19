@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarEditorial" type="tns:eliminarEditorial" />
+  <xs:element name="eliminarEditorialResponse" type="tns:eliminarEditorialResponse" />
+  <xs:element name="insertarEditorial" type="tns:insertarEditorial" />
+  <xs:element name="insertarEditorialResponse" type="tns:insertarEditorialResponse" />
+  <xs:element name="listarEditoriales" type="tns:listarEditoriales" />
+  <xs:element name="listarEditorialesResponse" type="tns:listarEditorialesResponse" />
+  <xs:element name="modificarEditorial" type="tns:modificarEditorial" />
+  <xs:element name="modificarEditorialResponse" type="tns:modificarEditorialResponse" />
+  <xs:element name="obtenerEditorial" type="tns:obtenerEditorial" />
+  <xs:element name="obtenerEditorialResponse" type="tns:obtenerEditorialResponse" />
+  <xs:complexType name="listarEditoriales">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEditorialesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:editorialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEditorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEditorialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEditorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEditorialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:editorialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEditorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEditorialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEditorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEditorialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

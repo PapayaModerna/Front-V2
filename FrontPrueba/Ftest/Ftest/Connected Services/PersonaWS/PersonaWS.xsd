@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="calcularLimitePrestamos" type="tns:calcularLimitePrestamos" />
+  <xs:element name="calcularLimitePrestamosResponse" type="tns:calcularLimitePrestamosResponse" />
+  <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
+  <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
+  <xs:element name="insertarPersona" type="tns:insertarPersona" />
+  <xs:element name="insertarPersonaResponse" type="tns:insertarPersonaResponse" />
+  <xs:element name="listarPersonas" type="tns:listarPersonas" />
+  <xs:element name="listarPersonasResponse" type="tns:listarPersonasResponse" />
+  <xs:element name="modificarContrasenha" type="tns:modificarContrasenha" />
+  <xs:element name="modificarContrasenhaResponse" type="tns:modificarContrasenhaResponse" />
+  <xs:element name="modificarPersona" type="tns:modificarPersona" />
+  <xs:element name="modificarPersonaResponse" type="tns:modificarPersonaResponse" />
+  <xs:element name="obtenerPersona" type="tns:obtenerPersona" />
+  <xs:element name="obtenerPersonaPorCredenciales" type="tns:obtenerPersonaPorCredenciales" />
+  <xs:element name="obtenerPersonaPorCredencialesResponse" type="tns:obtenerPersonaPorCredencialesResponse" />
+  <xs:element name="obtenerPersonaResponse" type="tns:obtenerPersonaResponse" />
+  <xs:complexType name="listarPersonas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPersonasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarContrasenha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nuevaContrasenha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarContrasenhaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredenciales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo_codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredencialesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="calcularLimitePrestamos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="calcularLimitePrestamosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoPersona">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PROFESOR" />
+      <xs:enumeration value="ADMINISTRADOR" />
+      <xs:enumeration value="ESTUDIANTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="turnos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MANHANA" />
+      <xs:enumeration value="TARDE" />
+      <xs:enumeration value="NOCHE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

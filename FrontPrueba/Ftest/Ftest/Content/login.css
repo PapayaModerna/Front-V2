@@ -1,0 +1,117 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.panel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden-panel {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(40px);
+}
+
+.visible-panel {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.panel-left {
+    width: 50%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: bold;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+    .panel-left .btn {
+        margin-top: 1.5em;
+        width: 50%;
+        padding: 1em;
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+        .panel-left .btn:hover {
+            background-color: white;
+            color: #4a90e2;
+        }
+
+.form-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background: #fff;
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+    .form-box.reset {
+        top: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 3;
+    }
+
+.container.reset .form-box.reset {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.reset .form-box.login {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+    .input-box input {
+        width: 100%;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #eee;
+        font-size: 16px;
+    }

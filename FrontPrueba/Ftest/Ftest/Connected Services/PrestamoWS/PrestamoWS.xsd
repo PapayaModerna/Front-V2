@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="contarPrestamosActivos" type="tns:contarPrestamosActivos" />
+  <xs:element name="contarPrestamosActivosResponse" type="tns:contarPrestamosActivosResponse" />
+  <xs:element name="contarPrestamosAtrasados" type="tns:contarPrestamosAtrasados" />
+  <xs:element name="contarPrestamosAtrasadosResponse" type="tns:contarPrestamosAtrasadosResponse" />
+  <xs:element name="contarPrestamosPorMaterial" type="tns:contarPrestamosPorMaterial" />
+  <xs:element name="contarPrestamosPorMaterialResponse" type="tns:contarPrestamosPorMaterialResponse" />
+  <xs:element name="eliminarPrestamo" type="tns:eliminarPrestamo" />
+  <xs:element name="eliminarPrestamoResponse" type="tns:eliminarPrestamoResponse" />
+  <xs:element name="insertarPrestamo" type="tns:insertarPrestamo" />
+  <xs:element name="insertarPrestamoResponse" type="tns:insertarPrestamoResponse" />
+  <xs:element name="listarEjemplaresPrestadosPorPersona" type="tns:listarEjemplaresPrestadosPorPersona" />
+  <xs:element name="listarEjemplaresPrestadosPorPersonaResponse" type="tns:listarEjemplaresPrestadosPorPersonaResponse" />
+  <xs:element name="listarEjemplaresSolicitadosPorPersona" type="tns:listarEjemplaresSolicitadosPorPersona" />
+  <xs:element name="listarEjemplaresSolicitadosPorPersonaResponse" type="tns:listarEjemplaresSolicitadosPorPersonaResponse" />
+  <xs:element name="listarPrestamos" type="tns:listarPrestamos" />
+  <xs:element name="listarPrestamosActivosPorPersona" type="tns:listarPrestamosActivosPorPersona" />
+  <xs:element name="listarPrestamosActivosPorPersonaResponse" type="tns:listarPrestamosActivosPorPersonaResponse" />
+  <xs:element name="listarPrestamosAtrasados" type="tns:listarPrestamosAtrasados" />
+  <xs:element name="listarPrestamosAtrasadosPorPersona" type="tns:listarPrestamosAtrasadosPorPersona" />
+  <xs:element name="listarPrestamosAtrasadosPorPersonaResponse" type="tns:listarPrestamosAtrasadosPorPersonaResponse" />
+  <xs:element name="listarPrestamosAtrasadosResponse" type="tns:listarPrestamosAtrasadosResponse" />
+  <xs:element name="listarPrestamosDevueltos" type="tns:listarPrestamosDevueltos" />
+  <xs:element name="listarPrestamosDevueltosPorPersona" type="tns:listarPrestamosDevueltosPorPersona" />
+  <xs:element name="listarPrestamosDevueltosPorPersonaResponse" type="tns:listarPrestamosDevueltosPorPersonaResponse" />
+  <xs:element name="listarPrestamosDevueltosResponse" type="tns:listarPrestamosDevueltosResponse" />
+  <xs:element name="listarPrestamosNoCulminados" type="tns:listarPrestamosNoCulminados" />
+  <xs:element name="listarPrestamosNoCulminadosResponse" type="tns:listarPrestamosNoCulminadosResponse" />
+  <xs:element name="listarPrestamosPorPersona" type="tns:listarPrestamosPorPersona" />
+  <xs:element name="listarPrestamosPorPersonaResponse" type="tns:listarPrestamosPorPersonaResponse" />
+  <xs:element name="listarPrestamosResponse" type="tns:listarPrestamosResponse" />
+  <xs:element name="listarPrestamosSolicitados" type="tns:listarPrestamosSolicitados" />
+  <xs:element name="listarPrestamosSolicitadosPorPersona" type="tns:listarPrestamosSolicitadosPorPersona" />
+  <xs:element name="listarPrestamosSolicitadosPorPersonaResponse" type="tns:listarPrestamosSolicitadosPorPersonaResponse" />
+  <xs:element name="listarPrestamosSolicitadosResponse" type="tns:listarPrestamosSolicitadosResponse" />
+  <xs:element name="modificarPrestamo" type="tns:modificarPrestamo" />
+  <xs:element name="modificarPrestamoResponse" type="tns:modificarPrestamoResponse" />
+  <xs:element name="obtenerPrestamo" type="tns:obtenerPrestamo" />
+  <xs:element name="obtenerPrestamoResponse" type="tns:obtenerPrestamoResponse" />
+  <xs:element name="solicitarPrestamo" type="tns:solicitarPrestamo" />
+  <xs:element name="solicitarPrestamoResponse" type="tns:solicitarPrestamoResponse" />
+  <xs:complexType name="contarPrestamosPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasadosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasadosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="persona" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitarPrestamoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosDevueltosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosDevueltosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosAtrasados">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosAtrasadosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresPrestadosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresPrestadosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejemplaresDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAdquisicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="formatoDigital" type="tns:formatoDigital" />
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+      <xs:element minOccurs="0" name="material" type="tns:materialesDTO" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoEjemplar" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="editorial" type="tns:editorialesDTO" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosNoCulminados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosNoCulminadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosSolicitadosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosSolicitadosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosSolicitados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosSolicitadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosActivos">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosActivosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresSolicitadosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresSolicitadosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosDevueltos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosDevueltosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrestamoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosActivosPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosActivosPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoPersona">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PROFESOR" />
+      <xs:enumeration value="ADMINISTRADOR" />
+      <xs:enumeration value="ESTUDIANTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="turnos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MANHANA" />
+      <xs:enumeration value="TARDE" />
+      <xs:enumeration value="NOCHE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="formatoDigital">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MP3" />
+      <xs:enumeration value="PDF" />
+      <xs:enumeration value="CBR" />
+      <xs:enumeration value="PPT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEjemplar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FISICO" />
+      <xs:enumeration value="DIGITAL" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

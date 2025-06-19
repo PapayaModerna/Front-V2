@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="SedeWS" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/SedeWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
+    </xsd:schema>
+  </types>
+  <message name="listarSedes">
+    <part name="parameters" element="tns:listarSedes" />
+  </message>
+  <message name="listarSedesResponse">
+    <part name="parameters" element="tns:listarSedesResponse" />
+  </message>
+  <message name="obtenerSede">
+    <part name="parameters" element="tns:obtenerSede" />
+  </message>
+  <message name="obtenerSedeResponse">
+    <part name="parameters" element="tns:obtenerSedeResponse" />
+  </message>
+  <message name="insertarSede">
+    <part name="parameters" element="tns:insertarSede" />
+  </message>
+  <message name="insertarSedeResponse">
+    <part name="parameters" element="tns:insertarSedeResponse" />
+  </message>
+  <message name="eliminarSede">
+    <part name="parameters" element="tns:eliminarSede" />
+  </message>
+  <message name="eliminarSedeResponse">
+    <part name="parameters" element="tns:eliminarSedeResponse" />
+  </message>
+  <message name="listarSedesActivas">
+    <part name="parameters" element="tns:listarSedesActivas" />
+  </message>
+  <message name="listarSedesActivasResponse">
+    <part name="parameters" element="tns:listarSedesActivasResponse" />
+  </message>
+  <message name="modificarSede">
+    <part name="parameters" element="tns:modificarSede" />
+  </message>
+  <message name="modificarSedeResponse">
+    <part name="parameters" element="tns:modificarSedeResponse" />
+  </message>
+  <message name="listarSedesActivasPorMaterial">
+    <part name="parameters" element="tns:listarSedesActivasPorMaterial" />
+  </message>
+  <message name="listarSedesActivasPorMaterialResponse">
+    <part name="parameters" element="tns:listarSedesActivasPorMaterialResponse" />
+  </message>
+  <portType name="SedeWS">
+    <operation name="listarSedes">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesRequest" message="tns:listarSedes" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesResponse" message="tns:listarSedesResponse" />
+    </operation>
+    <operation name="obtenerSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest" message="tns:obtenerSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse" message="tns:obtenerSedeResponse" />
+    </operation>
+    <operation name="insertarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeRequest" message="tns:insertarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeResponse" message="tns:insertarSedeResponse" />
+    </operation>
+    <operation name="eliminarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest" message="tns:eliminarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse" message="tns:eliminarSedeResponse" />
+    </operation>
+    <operation name="listarSedesActivas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasRequest" message="tns:listarSedesActivas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasResponse" message="tns:listarSedesActivasResponse" />
+    </operation>
+    <operation name="modificarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest" message="tns:modificarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse" message="tns:modificarSedeResponse" />
+    </operation>
+    <operation name="listarSedesActivasPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialRequest" message="tns:listarSedesActivasPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialResponse" message="tns:listarSedesActivasPorMaterialResponse" />
+    </operation>
+  </portType>
+  <binding name="SedeWSPortBinding" type="tns:SedeWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarSedes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSedesActivas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSedesActivasPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SedeWS">
+    <port name="SedeWSPort" binding="tns:SedeWSPortBinding">
+      <soap:address location="http://localhost:8080/myholywrapper-v2.1/SedeWS" />
+    </port>
+  </service>
+</definitions>

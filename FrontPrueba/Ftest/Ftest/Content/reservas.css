@@ -1,0 +1,43 @@
+﻿body {
+    font-family: "Roboto Mono";
+}
+
+.Cabecera {
+    display: flex;
+    width: 100%;
+    font-size: 3.5em;
+    margin-left: 0.8em;
+    margin-top: 0.2em;
+}
+
+.tarjetas {
+    padding: 0.5em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .card .boton-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: auto;
+    }
+
+.btnDetalle {
+    width: auto;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}

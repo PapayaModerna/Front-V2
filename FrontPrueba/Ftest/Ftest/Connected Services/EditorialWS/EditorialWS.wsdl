@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EditorialWS" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/EditorialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEditoriales">
+    <part name="parameters" element="tns:listarEditoriales" />
+  </message>
+  <message name="listarEditorialesResponse">
+    <part name="parameters" element="tns:listarEditorialesResponse" />
+  </message>
+  <message name="modificarEditorial">
+    <part name="parameters" element="tns:modificarEditorial" />
+  </message>
+  <message name="modificarEditorialResponse">
+    <part name="parameters" element="tns:modificarEditorialResponse" />
+  </message>
+  <message name="eliminarEditorial">
+    <part name="parameters" element="tns:eliminarEditorial" />
+  </message>
+  <message name="eliminarEditorialResponse">
+    <part name="parameters" element="tns:eliminarEditorialResponse" />
+  </message>
+  <message name="obtenerEditorial">
+    <part name="parameters" element="tns:obtenerEditorial" />
+  </message>
+  <message name="obtenerEditorialResponse">
+    <part name="parameters" element="tns:obtenerEditorialResponse" />
+  </message>
+  <message name="insertarEditorial">
+    <part name="parameters" element="tns:insertarEditorial" />
+  </message>
+  <message name="insertarEditorialResponse">
+    <part name="parameters" element="tns:insertarEditorialResponse" />
+  </message>
+  <portType name="EditorialWS">
+    <operation name="listarEditoriales">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest" message="tns:listarEditoriales" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse" message="tns:listarEditorialesResponse" />
+    </operation>
+    <operation name="modificarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest" message="tns:modificarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" message="tns:modificarEditorialResponse" />
+    </operation>
+    <operation name="eliminarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest" message="tns:eliminarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse" message="tns:eliminarEditorialResponse" />
+    </operation>
+    <operation name="obtenerEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
+    </operation>
+    <operation name="insertarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest" message="tns:insertarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse" message="tns:insertarEditorialResponse" />
+    </operation>
+  </portType>
+  <binding name="EditorialWSPortBinding" type="tns:EditorialWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEditoriales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EditorialWS">
+    <port name="EditorialWSPort" binding="tns:EditorialWSPortBinding">
+      <soap:address location="http://localhost:8080/myholywrapper-v2.1/EditorialWS" />
+    </port>
+  </service>
+</definitions>

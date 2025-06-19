@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MaterialWS" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/MaterialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCreadoresPorMaterial">
+    <part name="parameters" element="tns:listarCreadoresPorMaterial" />
+  </message>
+  <message name="listarCreadoresPorMaterialResponse">
+    <part name="parameters" element="tns:listarCreadoresPorMaterialResponse" />
+  </message>
+  <message name="listarMaterialesPorSede">
+    <part name="parameters" element="tns:listarMaterialesPorSede" />
+  </message>
+  <message name="listarMaterialesPorSedeResponse">
+    <part name="parameters" element="tns:listarMaterialesPorSedeResponse" />
+  </message>
+  <message name="listarPorCaracter_Creador">
+    <part name="parameters" element="tns:listarPorCaracter_Creador" />
+  </message>
+  <message name="listarPorCaracter_CreadorResponse">
+    <part name="parameters" element="tns:listarPorCaracter_CreadorResponse" />
+  </message>
+  <message name="listarEjemplaresMaterial">
+    <part name="parameters" element="tns:listarEjemplaresMaterial" />
+  </message>
+  <message name="listarEjemplaresMaterialResponse">
+    <part name="parameters" element="tns:listarEjemplaresMaterialResponse" />
+  </message>
+  <message name="listarTemasPorMaterial">
+    <part name="parameters" element="tns:listarTemasPorMaterial" />
+  </message>
+  <message name="listarTemasPorMaterialResponse">
+    <part name="parameters" element="tns:listarTemasPorMaterialResponse" />
+  </message>
+  <message name="listarMasSolicitados">
+    <part name="parameters" element="tns:listarMasSolicitados" />
+  </message>
+  <message name="listarMasSolicitadosResponse">
+    <part name="parameters" element="tns:listarMasSolicitadosResponse" />
+  </message>
+  <message name="listarMaterialesPorSedeYFiltro">
+    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltro" />
+  </message>
+  <message name="listarMaterialesPorSedeYFiltroResponse">
+    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltroResponse" />
+  </message>
+  <message name="listarMaterialPorCaracteres">
+    <part name="parameters" element="tns:listarMaterialPorCaracteres" />
+  </message>
+  <message name="listarMaterialPorCaracteresResponse">
+    <part name="parameters" element="tns:listarMaterialPorCaracteresResponse" />
+  </message>
+  <message name="insertarMaterial">
+    <part name="parameters" element="tns:insertarMaterial" />
+  </message>
+  <message name="insertarMaterialResponse">
+    <part name="parameters" element="tns:insertarMaterialResponse" />
+  </message>
+  <message name="modificarMaterial">
+    <part name="parameters" element="tns:modificarMaterial" />
+  </message>
+  <message name="modificarMaterialResponse">
+    <part name="parameters" element="tns:modificarMaterialResponse" />
+  </message>
+  <message name="listarMasRecientes">
+    <part name="parameters" element="tns:listarMasRecientes" />
+  </message>
+  <message name="listarMasRecientesResponse">
+    <part name="parameters" element="tns:listarMasRecientesResponse" />
+  </message>
+  <message name="eliminarMaterial">
+    <part name="parameters" element="tns:eliminarMaterial" />
+  </message>
+  <message name="eliminarMaterialResponse">
+    <part name="parameters" element="tns:eliminarMaterialResponse" />
+  </message>
+  <message name="obtenerPorId">
+    <part name="parameters" element="tns:obtenerPorId" />
+  </message>
+  <message name="obtenerPorIdResponse">
+    <part name="parameters" element="tns:obtenerPorIdResponse" />
+  </message>
+  <message name="listarTodos">
+    <part name="parameters" element="tns:listarTodos" />
+  </message>
+  <message name="listarTodosResponse">
+    <part name="parameters" element="tns:listarTodosResponse" />
+  </message>
+  <portType name="MaterialWS">
+    <operation name="listarCreadoresPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialRequest" message="tns:listarCreadoresPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialResponse" message="tns:listarCreadoresPorMaterialResponse" />
+    </operation>
+    <operation name="listarMaterialesPorSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequest" message="tns:listarMaterialesPorSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResponse" message="tns:listarMaterialesPorSedeResponse" />
+    </operation>
+    <operation name="listarPorCaracter_Creador">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorCaracter_CreadorRequest" message="tns:listarPorCaracter_Creador" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorCaracter_CreadorResponse" message="tns:listarPorCaracter_CreadorResponse" />
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRequest" message="tns:listarEjemplaresMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialResponse" message="tns:listarEjemplaresMaterialResponse" />
+    </operation>
+    <operation name="listarTemasPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRequest" message="tns:listarTemasPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialResponse" message="tns:listarTemasPorMaterialResponse" />
+    </operation>
+    <operation name="listarMasSolicitados">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" message="tns:listarMasSolicitados" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosResponse" message="tns:listarMasSolicitadosResponse" />
+    </operation>
+    <operation name="listarMaterialesPorSedeYFiltro">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroRequest" message="tns:listarMaterialesPorSedeYFiltro" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroResponse" message="tns:listarMaterialesPorSedeYFiltroResponse" />
+    </operation>
+    <operation name="listarMaterialPorCaracteres">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorCaracteresRequest" message="tns:listarMaterialPorCaracteres" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorCaracteresResponse" message="tns:listarMaterialPorCaracteresResponse" />
+    </operation>
+    <operation name="insertarMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest" message="tns:insertarMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
+    </operation>
+    <operation name="modificarMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest" message="tns:modificarMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse" message="tns:modificarMaterialResponse" />
+    </operation>
+    <operation name="listarMasRecientes">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest" message="tns:listarMasRecientes" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse" message="tns:listarMasRecientesResponse" />
+    </operation>
+    <operation name="eliminarMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
+    </operation>
+    <operation name="obtenerPorId">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest" message="tns:obtenerPorId" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse" message="tns:obtenerPorIdResponse" />
+    </operation>
+    <operation name="listarTodos">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest" message="tns:listarTodos" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse" message="tns:listarTodosResponse" />
+    </operation>
+  </portType>
+  <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCreadoresPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialesPorSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorCaracter_Creador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemasPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMasSolicitados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialesPorSedeYFiltro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialPorCaracteres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMasRecientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MaterialWS">
+    <port name="MaterialWSPort" binding="tns:MaterialWSPortBinding">
+      <soap:address location="http://localhost:8080/myholywrapper-v2.1/MaterialWS" />
+    </port>
+  </service>
+</definitions>
