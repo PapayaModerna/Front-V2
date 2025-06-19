@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\",
+  "WorkspaceRootPath": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\librosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|d:\\problemas c\u002B\u002B\\front-progra\\front-v2\\frontprueba\\ftest\\ftest\\librosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|solutionrelative:ftest\\librosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|c:\\users\\brayan\\desktop\\proyectos\\programacion 3\\proyecto\\frontprueba\\ftest\\ftest\\librosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\librosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|solutionrelative:ftest\\librosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|solutionrelative:ftest\\bibliomaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\prestamosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\prestamosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|solutionrelative:ftest\\prestamosprincipal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\prestamosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\prestamosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|solutionrelative:ftest\\prestamosprincipal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\Ftest.csproj|solutionrelative:ftest\\bibliomaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\ftest\\bibliomaster.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DF4BD84-06DD-423D-943D-3B29CEC7933C}|Ftest\\WA_Prueba.csproj|solutionrelative:ftest\\bibliomaster.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,40 +38,27 @@
       "DocumentGroups": [
         {
           "DockedHeight": 380,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "librosPrincipal.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx.cs",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx.cs",
               "RelativeDocumentMoniker": "Ftest\\librosPrincipal.aspx.cs",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx.cs",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx.cs",
               "RelativeToolTip": "Ftest\\librosPrincipal.aspx.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAYwIYAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:42:56.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T07:42:56.63Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "librosPrincipal.aspx",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx",
               "RelativeDocumentMoniker": "Ftest\\librosPrincipal.aspx",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\librosPrincipal.aspx",
               "RelativeToolTip": "Ftest\\librosPrincipal.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -82,9 +69,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "BiblioMaster.Master.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.designer.cs",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.designer.cs",
               "RelativeDocumentMoniker": "Ftest\\BiblioMaster.Master.designer.cs",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.designer.cs",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.designer.cs",
               "RelativeToolTip": "Ftest\\BiblioMaster.Master.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -94,9 +81,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "PrestamosPrincipal.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx.cs",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx.cs",
               "RelativeDocumentMoniker": "Ftest\\PrestamosPrincipal.aspx.cs",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx.cs",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx.cs",
               "RelativeToolTip": "Ftest\\PrestamosPrincipal.aspx.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAwwMYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -106,9 +93,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "PrestamosPrincipal.aspx",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx",
               "RelativeDocumentMoniker": "Ftest\\PrestamosPrincipal.aspx",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\PrestamosPrincipal.aspx",
               "RelativeToolTip": "Ftest\\PrestamosPrincipal.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -118,9 +105,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "BiblioMaster.Master.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.cs",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.cs",
               "RelativeDocumentMoniker": "Ftest\\BiblioMaster.Master.cs",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.cs",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master.cs",
               "RelativeToolTip": "Ftest\\BiblioMaster.Master.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -130,9 +117,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "BiblioMaster.Master",
-              "DocumentMoniker": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master",
+              "DocumentMoniker": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master",
               "RelativeDocumentMoniker": "Ftest\\BiblioMaster.Master",
-              "ToolTip": "C:\\Users\\Brayan\\Desktop\\PROYECTOS\\PROGRAMACION 3\\Proyecto\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master",
+              "ToolTip": "D:\\Problemas C\u002B\u002B\\FRONT-PROGRA\\Front-V2\\FrontPrueba\\Ftest\\Ftest\\BiblioMaster.Master",
               "RelativeToolTip": "Ftest\\BiblioMaster.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
