@@ -432,8 +432,8 @@
     <Content Include="Content\site.css" />
     <Content Include="Content\siteUsuario.css" />
     <Content Include="Content\usuarios.css" />
-    <Content Include="librosPrincipal.aspx" />
-    <Content Include="PrestamosPrincipal.aspx" />
+    <Content Include="PaginasAdmin\librosPrincipal.aspx" />
+    <Content Include="PaginasAdmin\PrestamosPrincipal.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -527,11 +527,11 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BiblioMaster.Master.cs">
+    <Compile Include="PaginasAdmin\BiblioMaster.Master.cs">
       <DependentUpon>BiblioMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BiblioMaster.Master.designer.cs">
+    <Compile Include="PaginasAdmin\BiblioMaster.Master.designer.cs">
       <DependentUpon>BiblioMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\CreadorWS\Reference.cs">
@@ -579,24 +579,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="librosPrincipal.aspx.cs">
+    <Compile Include="PaginasAdmin\librosPrincipal.aspx.cs">
       <DependentUpon>librosPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="librosPrincipal.aspx.designer.cs">
+    <Compile Include="PaginasAdmin\librosPrincipal.aspx.designer.cs">
       <DependentUpon>librosPrincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PrestamosPrincipal.aspx.cs">
+    <Compile Include="PaginasAdmin\PrestamosPrincipal.aspx.cs">
       <DependentUpon>PrestamosPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PrestamosPrincipal.aspx.designer.cs">
+    <Compile Include="PaginasAdmin\PrestamosPrincipal.aspx.designer.cs">
       <DependentUpon>PrestamosPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BiblioMaster.Master" />
+    <Content Include="PaginasAdmin\BiblioMaster.Master" />
     <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
     <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
       <SubType>Designer</SubType>
